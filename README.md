@@ -37,6 +37,16 @@ Create a resource file at app/res/values/mapbox_access_token.xml with the follow
 
 Upon launching the application, the offline download process will begin. Once the download is complete, a button will appear to load the map corresponding to the defined offline region. The region is defined using a polygon, and the offline tile download spans from zoom level 1 to 22.
 
+## BUG
+### Black Map
+
+If you encounter a black map when loading the offline region, it might be related to the pixelRatio setting in the offline region definition. The pixelRatio parameter adjusts the scale of the downloaded map tiles based on the device's screen resolution:
+
+    Standard Displays: A pixelRatio of 1.0 is typically sufficient.
+    High-Resolution Displays: Increasing the value to 2.0 may be necessary to render the tiles correctly.
+
+If the display shows a black screen, try adjusting the pixelRatio value in file "MainActivity.kt".
+
 ## Credits
 
 **Author**: Mathias Nocet
