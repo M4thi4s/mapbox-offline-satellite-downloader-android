@@ -44,6 +44,9 @@ android {
             excludes += '/META-INF/{AL2.0,LGPL2.1}'
         }
     }
+    viewBinding {
+        enabled = true
+    }
 }
 
 dependencies {
@@ -69,3 +72,4 @@ dependencies {
 
     implementation("com.mapbox.maps:android:11.11.0")
 }
+
