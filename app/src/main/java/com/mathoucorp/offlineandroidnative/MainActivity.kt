@@ -69,9 +69,9 @@ class MainActivity : ComponentActivity() {
         // Create the offline region definition with simplified parameters
         val offlineDefinition = OfflineRegionGeometryDefinition.Builder()
             .geometry(polygonGeometry)
-            .pixelRatio(2f)
-            .minZoom(1.0)
-            .maxZoom(DEFAULT_ZOOM + 20)
+            .pixelRatio(1f) // WARNING : DEPENDING ON DEVICE SCREEN RESOLUTION, IF DISPLAY SHOWS BLACK SCREEN, TRY TO SET 2.0f INSTEAD OF 1.0f
+            .minZoom(15.0)
+            .maxZoom(22.0)
             .styleURL(MAP_STYLE)
             .glyphsRasterizationMode(GlyphsRasterizationMode.NO_GLYPHS_RASTERIZED_LOCALLY)
             .build()
@@ -148,7 +148,7 @@ class MainActivity : ComponentActivity() {
         private const val TAG = "Offline"
         private const val DEFAULT_ZOOM = 16.0
         private val MAP_CENTER = Point.fromLngLat(-1.519202, 47.283447)
-        private const val COORDINATE_MARGIN = 0.0005
+        private const val COORDINATE_MARGIN = 0.001
 
         // Create a polygon that follows the counterclockwise (right-hand rule) order for the outer ring
         private val polygonGeometry: Polygon = Polygon.fromOuterInner(
