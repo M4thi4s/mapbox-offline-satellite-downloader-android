@@ -30,7 +30,7 @@ Create a resource file at app/res/values/mapbox_access_token.xml with the follow
 
 1. Clone this repository
 2. Open the project in your preferred IDE (Android Studio is recommended).
-3. Configure your Mapbox access token by editing app/res/values/mapbox_access_token.xml.
+3. Configure your Mapbox access token by editing app/src/main/res/values/mapbox_access_token.xml.
 4. Build and run the application on an Android device or emulator.
 
 ## Usage
